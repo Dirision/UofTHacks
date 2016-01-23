@@ -31,6 +31,15 @@
         android:id="@+id/textView2"
         android:layout_gravity="center" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_gravity="left|top"
+        android:visibility="invisible"
+        android:clickable="true"
+        android:enabled="false" />
 
 
 </FrameLayout>
