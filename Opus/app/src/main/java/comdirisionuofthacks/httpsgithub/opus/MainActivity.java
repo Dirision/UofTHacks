@@ -41,7 +41,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         yourButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(YourCurrentActivity.this, YourNewActivity.class));
+
+
+
+                startActivity(new Intent(MainActivity.this, WorkActivity.class));
             }
         });
 >>>>>>> origin/master
