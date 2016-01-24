@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.mbientlab.metawear.MetaWearBleService;
 import com.mbientlab.metawear.MetaWearBoard;
+import com.mbientlab.metawear.module.Accelerometer;
 
 public class WorkActivity extends AppCompatActivity implements ServiceConnection {
 
@@ -33,10 +34,27 @@ public class WorkActivity extends AppCompatActivity implements ServiceConnection
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_work);
 
         // Bind the service when the activity is created
         getApplicationContext().bindService(new Intent(this, MetaWearBleService.class),this, Context.BIND_AUTO_CREATE);
+
+        try {
+
+            Accelerometer accelModule = mwBoard.getModule(Accelerometer.class);
+
+            // Set the sampling frequency to 50Hz, or closest valid ODR
+            accelModule.setOutputDataRate(50.f);
+            // Set the measurement range to +/- 4g, or closet valid range
+            accelModule.setAxisSamplingRange(4.0f);
+
+            // enable axis sampling
+            accelModule.enableAxisSampling();
+
+            // Switch the accelerometer to active mode
+            accelModule.start();
+        } catch (Exception e){  }
+
     }
 
     @Override

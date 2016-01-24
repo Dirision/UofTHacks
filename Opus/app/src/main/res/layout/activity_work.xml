@@ -9,38 +9,4 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="comdirisionuofthacks.httpsgithub.opus.WorkActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="For how long?"
-        android:id="@+id/textView2"
-        android:layout_marginTop="86dp"
-        android:textSize="36dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:spinnerMode="dropdown" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GO"
-        android:id="@+id/button4"
-        android:layout_below="@+id/spinner"
-        android:layout_marginTop="57dp"
-        android:layout_alignRight="@+id/spinner"
-        android:layout_alignEnd="@+id/spinner"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:textSize="63dp" />
 </RelativeLayout>
