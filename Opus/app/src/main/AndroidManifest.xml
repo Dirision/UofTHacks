@@ -8,6 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <service android:name="com.mbientlab.metawear.MetaWearBleService" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,7 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".OptionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,13 +26,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".StatsActivity">
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
-=======
-        <activity android:name=".WorkActivity"></activity>
->>>>>>> origin/master
-    </application>
+        <activity android:name=".WorkActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
