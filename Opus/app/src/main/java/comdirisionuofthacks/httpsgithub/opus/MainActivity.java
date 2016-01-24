@@ -12,7 +12,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         final Button workButton = (Button) findViewById(R.id.button);
         workButton.setOnClickListener(this);
 
@@ -36,7 +35,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(intent3);
                 break;
         }
-=======
+
         Button yourButton = (Button) findViewById(R.id.button);
 
         yourButton.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +46,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 startActivity(new Intent(MainActivity.this, WorkActivity.class));
             }
         });
->>>>>>> origin/master
+
     }
 }
